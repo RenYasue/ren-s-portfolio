@@ -10,13 +10,21 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- 画面遷移時のアニメーション -->
+    <div id="splash">
+        <div id="splash-logo">loading
+        </div>
+        <!--/splash--></div>
+        <div class="splashbg"></div>
+        <!---画面遷移用-->
+        <div id="container">
 
 <div class="wrapper">
     <div id="slider">
         <h1>REN'S PORTFOLIO</h1>
         <nav>
             <ul class="slider-menu">
-                <li><a href="#about">About</a></li>
+                <li class="current"><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#news">News</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -25,32 +33,59 @@
     </div>
 </div>
 
-
 <section id="about" class="profile-section">
     <div class="profile-content">
         <h2 class="vertical-text">ABOUT</h2>
         <div class="profile-text">
-            <p class="centered-name">ヨシダナギ</p>
-            <p>1986年生まれ フォトグラファー 独学で写真を学び、2009年より単身アフリカへ</p>
-            <p>以来アフリカをはじめとする世界中の少数民族を撮影、発表。</p>
-            <p>唯一無二の色彩と直感的な生き方が評価され</p>
-            <p>2017年日経ビジネス誌で「次代を創る100人」へ選出</p>
-            <p>また同年、講談社出版文化賞 写真賞を受賞</p>
-            <p class="centered-name">Nagi Yoshida</p>
-            <p>Born in 1986. A self-taught photographer who traveled to Africa on her own in 2009.</p>
-            <p>Since then, has been shooting and publishing photographs of minority ethnic groups in Africa and elsewhere around the world.</p>
-            <p>Was selected among the "100 people creating the next generation" by magazine Nikkei Business in 2017 to commend her unique style and visceral way of living.</p>
-            <p>Won the photography award in the publication culture awards by publishing house Kodansha.</p>
+            <div class="profile-japanese">
+                <p class="centered-name">ヤスエ　レン</p>
+                <p>2002年生まれ 22歳の大学４年生 趣味として写真撮影をはじめ</p>
+                <p>現在活動の幅を広げようと奮闘中</p>
+                <p>札幌マチヅクリ大学にて創作活動の楽しさを知り</p>
+                <p>将来的には、自分の個性の出せる仕事をしたいと考えている</p>
+                <p>来年からは広告印刷系の会社の内定も決まっている</p>
+            </div>
+            <div class ="profile-english">
+                <p class="centered-name">Ren Yasue</p>
+                <p>Born in 2002, 22-year-old fourth-year university student. Started taking photos as a hobby</p>
+                <p>Currently working hard to broaden the scope of his activities</p>
+                <p>Discovered the joy of creative activities at Sapporo Machizukuri University</p>
+                <p>In the future, he hopes to find a job that allows him to express his individuality</p>
+                <p>Has already received a job offer from an advertising printing company starting next year</p>
+            </div>
         </div>
         <div class="profile-image">
-            <img src="img/about.jpg">
+            <img src="./about.jpg" alt="プロフィール画像">
         </div>
     </div>
 </section>
 
+<section id="work" class="work-section">
+    <h2 class="vertical-text">WORK</h2>
+    <div class="work-gallery">
+        <div class="main-image">
+            <img id="main-display" src="img/IMG_0533.JPG" alt="Main Image">
+        </div>
+        <div class="thumbnail-gallery">
+            <img src="img/IMG_0533.JPG" alt="Thumbnail 1" onclick="changeImage('img/IMG_0533.JPG')">
+            <img src="img/IMG_0590.JPG" alt="Thumbnail 2" onclick="changeImage('img/IMG_0590.JPG')">
+            <img src="img/IMG_0600.JPG" alt="Thumbnail 3" onclick="changeImage('img/IMG_0600.JPG')">
+            <img src="img/IMG_2174.JPG" alt="Thumbnail 4" onclick="changeImage('img/IMG_2174.JPG')">
+            <img src="img/IMG_3730.JPG" alt="Thumbnail 5" onclick="changeImage('img/IMG_3730.JPG')">
+        </div>
+    </div>
+</section>
+
+
+
+
+</div><!-- /#container -->
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
 <script src="./js/mainPhoto.js"></script>
-
+<script src="./js/loading.js"></script>
+<!-- workjs -->
+<script>function changeImage(newSrc) {document.getElementById('main-display').src = newSrc;}</script>
 </body>
 </html>
