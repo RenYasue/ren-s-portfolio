@@ -3,17 +3,17 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 if (windowwidth > 768){
     var responsiveImage = [//PC用の画像
-        { src: 'img/IMG_0657.JPG'},
-        { src: 'img/IMG_0719.JPG'},
-        { src: 'img/IMG_1743.JPG'},
-        { src: 'img/IMG_1034.JPG'} // 追加の画像を指定
+        { src: './IMG_0657.JPG'},
+        { src: './IMG_0719.JPG'},
+        { src: './IMG_1743.JPG'},
+        { src: './IMG_1034.JPG'} // 追加の画像を指定
     ];
 } else {
     var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-        { src: 'img/IMG_0657.JPG'},
-        { src: 'img/IMG_0719.JPG'},
-        { src: 'img/IMG_1743.JPG'},
-        { src: 'img/IMG_1034.JPG'} // 追加の画像を指定
+        { src: './IMG_0657.JPG'},
+        { src: './IMG_0719.JPG'},
+        { src: './IMG_1743.JPG'},
+        { src: './IMG_1034.JPG'} // 追加の画像を指定
     ];
 }
 
